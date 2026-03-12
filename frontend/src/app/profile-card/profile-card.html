@@ -1,3 +1,25 @@
-<ion-text>
-  Get yo bitch ass outta here!
-</ion-text>
+<!-- src/app/profile-card/profile-card.html -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ nombre }}</ion-card-title>
+    <ion-card-subtitle>{{ rol }}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    @if (activo) {
+    <ion-chip color="success">
+      <ion-label>Activo</ion-label>
+    </ion-chip>
+    } @else {
+    <ion-chip color="medium">
+      <ion-label>Inactivo</ion-label>
+    </ion-chip>
+    }
+  </ion-card-content>
+
+  <div class="card-actions">
+    <ion-button fill="outline" (click)="onVerDetalle()">Ver Detalle</ion-button>
+  </div>
+</ion-card>
+
+
