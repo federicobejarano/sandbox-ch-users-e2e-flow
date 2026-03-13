@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; // pipes básicos
 
 @Component({
   selector: 'app-todo-item',
