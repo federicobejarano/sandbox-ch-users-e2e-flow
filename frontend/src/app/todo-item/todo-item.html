@@ -1,0 +1,9 @@
+<div>
+  <input
+    type="checkbox"
+    [(ngModel)]="todo.completed"
+    (change)="onToggle()"
+  >
+  <span class="todo-text">{{ todo.text }}</span>
+  <button (click)="onDelete()" class="delete-btn"></button>
+</div>
