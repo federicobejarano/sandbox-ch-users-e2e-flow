@@ -44,7 +44,7 @@ build/
 # ===== Angular / Node =====
 node_modules/
 dist/
-.angular/cache/
+.angular/
 
 # ===== OS =====
 .DS_Store
