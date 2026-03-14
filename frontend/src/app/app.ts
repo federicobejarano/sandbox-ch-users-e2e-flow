@@ -1,21 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ProfileCard } from './profile-card/profile-card';
-import { TodoItem } from './todo-item/todo-item';
+import { Component } from '@angular/core';
+import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 
+// The root component is an architectural shell: no UI of its own.
+// Its sole responsibility is mounting the hierarchy Ionic requires
+// to manage navigation, transitions, and platform layout.
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileCard, TodoItem],
-  // templateUrl: './app.html',
+  imports: [IonApp, IonRouterOutlet],
   template: `
-    <div class="app">
-        <h1>My Todo App</h1>
-        <app-todo-item></app-todo-item>
-    </div>
+    <ion-app>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-app>
   `,
-  styleUrl: './app.css',
+  styles: [],
 })
-export class App {
-  // protected readonly title = signal('users');
-  title = 'standalone-demo';
-}
+export class App {}
